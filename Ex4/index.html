@@ -3,12 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBoard</title>
+    <title>POS Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            height: 100vh;
+            background-color: #E9E9E9;
+        }
+        .leftside {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        }
+        .icon img {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+        .menu {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 20px;
+        }
+        .menu button {
+            width: 100%;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 12px 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .menu button:hover {
+            background-color: #45a049;
+        }
+        .rightside {
+            background-color: #F6F6F6;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content {
+            background: white;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+            padding: 20px;
+        }
+        span {
+            content: "\22EE";
+        }
+        input{
+            border: none;
+            border-radius: 5px;
+            height: 28px ;
+            
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem;
+            justify-content: space-evenly;
+           
+        }
+        .item {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: 0.2s ease-in-out;
+        }
+        .item img {
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+        .item h3 {
+            font-size: 18px;
+            text-align: center;
+            margin: 10px 0 5px;
+        }
+
+        .item p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+            margin: 0;
+        }
+
+        .item button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.25s ease;
+        }
+
+        .item button:hover {
+            background-color: #3b8d3e;
+        }
+
+
+    </style>
 </head>
 <body>
-    
-
-
-
+    <div class="container">
+        <div class="leftside">
+            <div class="icon">
+                <img src="https://cadt.edu.kh/wp-content/uploads/2022/09/CADT-Masterbrand-Logos-Navy_CADT-Lockup-2-English.png" alt="Logo">
+            </div>
+            <div class="menu">
+                <button><i class="fa-solid fa-burger"></i>Food</button>
+                <button><i class="fa-solid fa-cash-register"></i>Sales</button>
+                <button><i class="fa-solid fa-box"></i>Inventory</button>
+                <button><i class="fa-solid fa-users"></i>Customers</button>
+                <button><i class="fa-solid fa-chart-line"></i>Reports</button>
+                <button><i class="fa-solid fa-gear"></i>Settings</button>
+            </div>
+        </div>
+        <div class="rightside">
+            <div class="header">
+                <div>CADT Conteen POS System</div>
+                <div class="center">
+                    <input type="text" placeholder="Search">
+                    <span>&#8942;</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="item">
+                    <div class="center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOMkQnaN3ODUO1xhYY5ZJGBcqOthMcJRKKGQ&s" alt="">
+                    </div>
+                    <div>
+                        <h3>Lunch</h3>
+                        <p>7000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="item">
+                    <div class="center">
+                        <img src="https://www.indochina.tours/wp-content/uploads/2018/07/Cambodia-Breakfast-Bai-Sach-Chrouk.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>Bay Srob</h3>
+                        <p>5000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="item">
+                    <div class="center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXpUlgS1TeS8cmX3boQEsm-XahNRBpgMOaYA&s" alt="">
+                    </div>
+                    <div>
+                        <h3>Kuy Teav</h3>
+                        <p>7000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="item">
+                    <div class="center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIfWpTQ52ni4KegA_FX6NKYpu0h-bfTnwiSA&s" alt="">
+                    </div>
+                    <div>
+                        <h3>Banh Sung</h3>
+                        <p>5000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                
+                <div class="item">
+                    <div class="center">
+                        <img src="https://www.coca-cola.com/content/dam/onexp/kh/en/brands/coca-cola/coca-cola-original-taste.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Coca Cola</h3>
+                        <p>2000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="item">
+                    <div class="center">
+                        <img src="https://www.vital.com.kh/2018/image/cache/catalog/Vital-Bottle-350ml-800x800.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Vital Water</h3>
+                        <p>1000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="item">
+                    <div class="center">
+                        <img src="https://img.freepik.com/premium-photo/fresh-drinks-popular-cambodia_642935-45.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>Coffee fin latte</h3>
+                        <p>4000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="item">
+                    <div class="center">
+                        <img src="https://i.pinimg.com/474x/cc/90/39/cc9039642b4a6df9d4152e5361795802.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>Tea Jruok</h3>
+                        <p>3000r</p>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
